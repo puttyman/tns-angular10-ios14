@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noEmitHelpers": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "lib": [
+            "es2018",
+            "es2017",
+            "dom",
+            "es6",
+            "ESNext"
+        ],
+        "types": [
+            "node",
+            "chai",
+            "mocha",
+            "chai-spies",
+            "karma-chai",
+            "couchbase"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "./node_modules/*"
+            ],
+            "~/*": [
+                "app/*"
+            ]
+        }
+    },
+    "include": [
+        "references.d.ts",
+    ],
+    "files": [
+        "./app/main.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "platforms",
+    ]
+}
