@@ -4,5 +4,6 @@
         "markingMode": "full"
     },
     "main": "main.js",
-    "name": "tns-angular10-ios14",
+    "name": "name",
+    "version": "0.0.1"
 }
