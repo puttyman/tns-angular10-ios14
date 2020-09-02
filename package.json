@@ -1,11 +1,5 @@
 {
   "name": "tns-angular10-ios14",
-  "nativescript": {
-    "id": "com.tns-angular10-ios14.nsmobile",
-    "tns-ios": {
-      "version": "7.0.0-beta.3-v8-2020-07-01-222820-05"
-    }
-  },
   "hooks": [
     {
       "type": "before-livesync",
@@ -59,8 +53,8 @@
     "@angular/platform-browser": "^10.0.14",
     "@angular/platform-browser-dynamic": "^10.0.14",
     "@angular/router": "^10.0.14",
-    "@nativescript/angular": "^10.0.3",
-    "@nativescript/core": "^7.0.0",
+    "@nativescript/angular": "~10.0.0",
+    "@nativescript/core": "~7.0.0",
     "@nativescript/theme": "~2.3.0",
     "@ngxs/devtools-plugin": "^3.6.2",
     "@ngxs/logger-plugin": "^3.6.2",
@@ -83,8 +77,10 @@
   "devDependencies": {
     "@angular-devkit/schematics": "^10.0.8",
     "@angular/compiler-cli": "^10.0.14",
-    "@nativescript/types": "^7.0.1",
-    "@nativescript/webpack": "^3.0.0",
+    "@nativescript/android": "~7.0.0",
+    "@nativescript/ios": "7.0.0",
+    "@nativescript/types": "~7.0.0",
+    "@nativescript/webpack": "~3.0.0",
     "@ngtools/webpack": "^10.0.8",
     "@types/chai": "^4.2.12",
     "@types/chai-spies": "^1.0.1",
@@ -148,7 +144,7 @@
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.4",
     "tslint": "6.1.2",
-    "typescript": "^3.9.2",
+    "typescript": "~3.9.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^3.8.0",
@@ -158,10 +154,10 @@
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "ngcc": "ngcc --properties es2015 module main --first-only",
-    "ios": "tns run ios --bundle --no-hmr --env.aot",
-    "build-ios": "tns build ios --bundle",
-    "test-ios": "tns test ios --emulator",
+    "ngcc": "ngcc --properties es2017 module main --first-only",
+    "ios": "ns run ios --bundle --no-hmr --env.aot",
+    "build-ios": "ns build ios --bundle",
+    "test-ios": "ns test ios --emulator",
     "build": "npm run clean && npm i && npm run recompile",
     "clean-generated": "rimraf \"./app/**/*.js\" && rimraf \"./app/**/*.css\" && tsc -p ./",
     "clean": "npx rimraf node_modules hooks platforms",

@@ -7,8 +7,6 @@ Trace.enable();
 @NgModule({
     bootstrap: [AppComponent],
     declarations: [AppComponent],
-    imports: [],
-    providers: [],
     schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule { }
