@@ -1,9 +1,0 @@
-{
-    "android": {
-        "v8Flags": "--expose_gc",
-        "markingMode": "full"
-    },
-    "main": "main.js",
-    "name": "name",
-    "version": "0.0.1"
-}

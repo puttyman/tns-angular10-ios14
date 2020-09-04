@@ -14,14 +14,6 @@
             "es6",
             "ESNext"
         ],
-        "types": [
-            "node",
-            "chai",
-            "mocha",
-            "chai-spies",
-            "karma-chai",
-            "couchbase"
-        ],
         "baseUrl": ".",
         "paths": {
             "*": [
