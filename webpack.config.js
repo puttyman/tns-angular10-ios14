@@ -30,6 +30,8 @@ module.exports = env => {
     "@nativescript/core/ui/frame", "@nativescript/core/ui/frame/activity"
   ];
 
+  env = { development: true, ios: "ios" };
+
   const platform = env && ((env.android && 'android') || (env.ios && 'ios'));
   if (!platform) {
     throw new Error('You need to provide a target platform!');
@@ -48,7 +50,7 @@ module.exports = env => {
     // The 'appPath' and 'appResourcesPath' values are fetched from
     // the nsconfig.json configuration file
     // when bundling with `tns run android|ios --bundle`.
-    appPath = 'src',
+    appPath = 'app',
     appResourcesPath = 'App_Resources',
 
     // You can provide the following flags when running 'tns run android|ios'
@@ -214,7 +216,6 @@ module.exports = env => {
         'node_modules'
       ],
       alias: {
-        '~/package.json': resolve(projectRoot, 'package.json'),
         '~': appFullPath,
         "tns-core-modules": "@nativescript/core",
         "nativescript-angular": "@nativescript/angular"
